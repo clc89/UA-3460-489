@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 University of Akron. All rights reserved.
 //
 
-#import "ISTSecondViewController.h"
+#import "ISTCourseMasterViewController.h"
 
-@interface ISTSecondViewController ()
+@interface ISTCourseMasterViewController ()
 
 @end
 
-@implementation ISTSecondViewController
+@implementation ISTCourseMasterViewController
 
 - (void)viewDidLoad
 {

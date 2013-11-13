@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
         </scene>
-        <!--Second View Controller - Courses-->
+        <!--Course Master View Controller - Courses-->
         <scene sceneID="Syg-4j-BcF">
             <objects>
-                <tableViewController id="heK-MI-eI4" customClass="ISTSecondViewController" sceneMemberID="viewController">
+                <tableViewController id="heK-MI-eI4" customClass="ISTCourseMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="o4Y-uS-DFe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="1170" y="576"/>
         </scene>
-        <!--View Controller-->
+        <!--Course Detail View Controller-->
         <scene sceneID="nov-Cq-BHT">
             <objects>
-                <viewController id="RcF-9L-Qrw" sceneMemberID="viewController">
+                <viewController id="RcF-9L-Qrw" customClass="ISTCourseDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V91-oa-1cJ"/>
                         <viewControllerLayoutGuide type="bottom" id="usn-ka-6he"/>

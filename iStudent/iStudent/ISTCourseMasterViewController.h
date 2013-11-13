@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface ISTSecondViewController : UITableViewController
+@interface ISTCourseMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @end
