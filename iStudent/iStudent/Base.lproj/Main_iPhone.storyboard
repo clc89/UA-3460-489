@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
         </scene>
-        <!--Table View Controller - Courses-->
+        <!--Second View Controller - Courses-->
         <scene sceneID="Syg-4j-BcF">
             <objects>
-                <tableViewController id="heK-MI-eI4" sceneMemberID="viewController">
+                <tableViewController id="heK-MI-eI4" customClass="ISTSecondViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="o4Y-uS-DFe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
         <scene sceneID="8fa-Lk-4or">
             <objects>
                 <navigationController definesPresentationContext="YES" id="c0h-kM-NAV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Courses" id="RHR-mN-oIx"/>
+                    <tabBarItem key="tabBarItem" title="Courses" image="second" id="RHR-mN-oIx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b6d-O5-GkV">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -149,6 +149,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
