@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ISTCourseDetailViewController : UIViewController
+@interface ISTCourseDetailViewController : UIViewController <MKMapViewDelegate>
 
 @end
