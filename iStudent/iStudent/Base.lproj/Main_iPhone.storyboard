@@ -111,6 +111,30 @@
             </objects>
             <point key="canvasLocation" x="1655" y="576"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Jn1-0R-Anb">
+            <objects>
+                <viewController id="TLE-k1-sew" customClass="ISTMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l4Y-rb-dwd"/>
+                        <viewControllerLayoutGuide type="bottom" id="gPR-k9-qQT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y26-am-QII">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqJ-Gg-oL7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ihw-ea-073" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2171" y="576"/>
+        </scene>
         <!--Navigation Controller - Courses-->
         <scene sceneID="8fa-Lk-4or">
             <objects>

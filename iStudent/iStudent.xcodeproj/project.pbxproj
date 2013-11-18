@@ -11,6 +11,7 @@
 		7D793F0E183A77A60062228F /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D793F0A183A77A60062228F /* check@2x.png */; };
 		7D793F0F183A77A60062228F /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D793F0B183A77A60062228F /* news.png */; };
 		7D793F10183A77A60062228F /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D793F0C183A77A60062228F /* news@2x.png */; };
+		7D793F13183A7B480062228F /* ISTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D793F12183A7B480062228F /* ISTMapViewController.m */; };
 		7DD1BA5E18340D57005436F9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD1BA5D18340D57005436F9 /* CoreData.framework */; };
 		7DD1BA6118340D8E005436F9 /* ISTCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD1BA6018340D8E005436F9 /* ISTCourseDetailViewController.m */; };
 		7DD91AD7182D88E0000AC8AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD91AD6182D88E0000AC8AA /* Foundation.framework */; };
@@ -46,6 +47,8 @@
 		7D793F0A183A77A60062228F /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
 		7D793F0B183A77A60062228F /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
 		7D793F0C183A77A60062228F /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news@2x.png"; sourceTree = "<group>"; };
+		7D793F11183A7B480062228F /* ISTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTMapViewController.h; sourceTree = "<group>"; };
+		7D793F12183A7B480062228F /* ISTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTMapViewController.m; sourceTree = "<group>"; };
 		7DD1BA5D18340D57005436F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7DD1BA5F18340D8E005436F9 /* ISTCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTCourseDetailViewController.h; sourceTree = "<group>"; };
 		7DD1BA6018340D8E005436F9 /* ISTCourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTCourseDetailViewController.m; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				7DD91AF2182D88E0000AC8AA /* ISTCourseMasterViewController.m */,
 				7DD1BA5F18340D8E005436F9 /* ISTCourseDetailViewController.h */,
 				7DD1BA6018340D8E005436F9 /* ISTCourseDetailViewController.m */,
+				7D793F11183A7B480062228F /* ISTMapViewController.h */,
+				7D793F12183A7B480062228F /* ISTMapViewController.m */,
 				7DD91AF4182D88E0000AC8AA /* Images.xcassets */,
 				7DD91ADD182D88E0000AC8AA /* Supporting Files */,
 			);
@@ -284,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D793F13183A7B480062228F /* ISTMapViewController.m in Sources */,
 				7DD91AE3182D88E0000AC8AA /* main.m in Sources */,
 				7DD91AF0182D88E0000AC8AA /* ISTFirstViewController.m in Sources */,
 				7DD91AE7182D88E0000AC8AA /* ISTAppDelegate.m in Sources */,

@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="2023" y="718"/>
         </scene>
-        <!--Course Master View Controller-->
+        <!--Course Detail View Controller-->
         <scene sceneID="RQo-sz-dkw">
             <objects>
-                <viewController id="n9O-nZ-ptI" customClass="ISTCourseMasterViewController" sceneMemberID="viewController">
+                <viewController id="n9O-nZ-ptI" customClass="ISTCourseDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EeH-ZG-lJN"/>
                         <viewControllerLayoutGuide type="bottom" id="Guq-dS-uWJ"/>
@@ -85,18 +85,24 @@
                     <view key="view" contentMode="scaleToFill" id="Mbj-Oj-VRN">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-Af-JaG">
+                                <rect key="frame" x="0.0" y="424" width="768" height="600"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vc-Y7-AFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4052" y="2058"/>
+            <point key="canvasLocation" x="4052" y="2080"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Course Master View Controller - Root View Controller-->
         <scene sceneID="jlK-px-tFi">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="UFa-2i-mup" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="UFa-2i-mup" customClass="ISTCourseMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UVX-yk-0xI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
