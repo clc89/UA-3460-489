@@ -11,4 +11,12 @@
 
 @interface ISTCourseDetailViewController : UIViewController <MKMapViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UISwitch *courseTaken;
+@property (weak, nonatomic) IBOutlet UILabel *courseNumber;
+@property (weak, nonatomic) IBOutlet UILabel *courseName;
+@property (weak, nonatomic) IBOutlet UILabel *courseInstructor;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *courseDays;
+@property (weak, nonatomic) IBOutlet UILabel *courseTimeBegin;
+@property (weak, nonatomic) IBOutlet UILabel *courseTimeEnd;
+
 @end
