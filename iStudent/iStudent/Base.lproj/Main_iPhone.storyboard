@@ -122,13 +122,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Michael L. Collard, Ph.D." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTA-16-dgo">
-                                <rect key="frame" x="20" y="236" width="191" height="21"/>
+                                <rect key="frame" x="17" y="272" width="191" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="vX2-Ld-wQq">
-                                <rect key="frame" x="20" y="265" width="280" height="29"/>
+                                <rect key="frame" x="17" y="301" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Mon"/>
@@ -141,29 +141,25 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3:20 pm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlv-Uj-Hbg">
-                                <rect key="frame" x="20" y="301" width="120" height="21"/>
+                                <rect key="frame" x="17" y="337" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4:10 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VX5-8e-RJu">
-                                <rect key="frame" x="180" y="301" width="120" height="21"/>
+                                <rect key="frame" x="180" y="337" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhe-qj-lYG">
-                                <rect key="frame" x="148" y="301" width="24" height="21"/>
+                                <rect key="frame" x="148" y="337" width="24" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scc-Ix-zdd">
-                                <rect key="frame" x="0.0" y="358" width="320" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </mapView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arts &amp; Sciences (CAS) 142" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk5-go-zAy">
-                                <rect key="frame" x="20" y="330" width="280" height="21"/>
+                                <rect key="frame" x="17" y="366" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -217,6 +213,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pmi-w9-3fN">
+                                <rect key="frame" x="17" y="236" width="283" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="801"/>
+                                    <segment title="802"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeSection:" destination="RcF-9L-Qrw" eventType="valueChanged" id="d4L-N7-GVF"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxy-fT-4sr">
+                                <rect key="frame" x="110" y="395" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show on Map">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="exT-9X-srf" kind="push" id="0vp-7G-vOe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -229,8 +246,9 @@
                         <outlet property="courseName" destination="RbB-s7-jZb" id="bfc-PQ-9EP"/>
                         <outlet property="courseNumber" destination="6Dr-ZL-AnV" id="aOy-Q0-oPR"/>
                         <outlet property="courseRequired" destination="92Q-Jk-oAC" id="B9A-uu-VhJ"/>
+                        <outlet property="courseSections" destination="Pmi-w9-3fN" id="aTn-06-79Q"/>
                         <outlet property="courseTaken" destination="ymz-qy-DGm" id="b9P-eu-iBZ"/>
-                        <outlet property="courseTerm" destination="9cK-32-d14" id="9Ox-ml-Z01"/>
+                        <outlet property="courseTerms" destination="9cK-32-d14" id="co3-Qp-2k6"/>
                         <outlet property="courseTimeBegin" destination="tlv-Uj-Hbg" id="YET-u9-K8t"/>
                         <outlet property="courseTimeEnd" destination="VX5-8e-RJu" id="g6T-sb-9t3"/>
                     </connections>
@@ -238,6 +256,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsI-Jh-O5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1655" y="576"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8fe-64-lK8">
+            <objects>
+                <viewController id="exT-9X-srf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="56X-oe-Bb3"/>
+                        <viewControllerLayoutGuide type="bottom" id="88f-nZ-SuQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jdj-rt-tIc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvc-Ve-BRJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B1U-pw-vXI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSy-uU-N6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="576"/>
         </scene>
         <!--Navigation Controller - Courses-->
         <scene sceneID="8fa-Lk-4or">

@@ -17,14 +17,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *courseArea;
 @property (weak, nonatomic) IBOutlet UILabel *courseRequired;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *courseTerm;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *courseTerms;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *courseSections;
+
 @property (weak, nonatomic) IBOutlet UILabel *courseInstructor;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *courseDays;
 @property (weak, nonatomic) IBOutlet UILabel *courseTimeBegin;
 @property (weak, nonatomic) IBOutlet UILabel *courseTimeEnd;
 @property (weak, nonatomic) IBOutlet UILabel *courseLocation;
 
+@property (weak, nonatomic) IBOutlet MKMapView *courseMapLocation;
+
 - (IBAction)didChangeTaken:(id)sender;
 - (IBAction)didChangeTerm:(id)sender;
+- (IBAction)didChangeSection:(id)sender;
 
 @end

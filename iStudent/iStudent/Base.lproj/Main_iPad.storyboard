@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-Af-JaG">
-                                <rect key="frame" x="0.0" y="276" width="768" height="748"/>
+                                <rect key="frame" x="0.0" y="312" width="768" height="712"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3460:489/589-801" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlW-eg-6RC">
@@ -149,14 +149,14 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Michael L. Collard, Ph.D." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0f-KQ-7vK">
-                                <rect key="frame" x="20" y="153" width="191" height="21"/>
+                                <rect key="frame" x="20" y="189" width="191" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EsZ-Mx-VSk">
-                                <rect key="frame" x="20" y="182" width="728" height="29"/>
+                                <rect key="frame" x="20" y="218" width="728" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Monday"/>
@@ -169,30 +169,38 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3:20 pm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZ0-2x-GgR">
-                                <rect key="frame" x="20" y="218" width="350" height="21"/>
+                                <rect key="frame" x="20" y="254" width="350" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4:10 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKy-RA-ZUB">
-                                <rect key="frame" x="398" y="218" width="350" height="21"/>
+                                <rect key="frame" x="398" y="254" width="350" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfX-w7-efr">
-                                <rect key="frame" x="377" y="218" width="14" height="21"/>
+                                <rect key="frame" x="377" y="254" width="14" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arts &amp; Sciences (CAS) 142" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUZ-57-Lzf">
-                                <rect key="frame" x="20" y="247" width="203" height="21"/>
+                                <rect key="frame" x="20" y="283" width="728" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="myT-q5-3yO">
+                                <rect key="frame" x="20" y="153" width="728" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Section 801"/>
+                                    <segment title="Section 802"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -202,11 +210,13 @@
                         <outlet property="courseDays" destination="EsZ-Mx-VSk" id="qMz-ZA-KEF"/>
                         <outlet property="courseInstructor" destination="O0f-KQ-7vK" id="5fQ-K5-kgW"/>
                         <outlet property="courseLocation" destination="bUZ-57-Lzf" id="tsz-9D-bvz"/>
+                        <outlet property="courseMapLocation" destination="Oae-Af-JaG" id="fR1-hD-4pb"/>
                         <outlet property="courseName" destination="0Tc-2h-j4D" id="8ua-LB-vMN"/>
                         <outlet property="courseNumber" destination="qlW-eg-6RC" id="eQj-gg-MyS"/>
                         <outlet property="courseRequired" destination="dzT-OU-1OB" id="UCR-di-tBY"/>
+                        <outlet property="courseSections" destination="myT-q5-3yO" id="hnu-Zb-VYP"/>
                         <outlet property="courseTaken" destination="DtS-h6-nZ6" id="l4f-GB-88m"/>
-                        <outlet property="courseTerm" destination="Jxc-Gs-z3b" id="sm8-6v-bWq"/>
+                        <outlet property="courseTerms" destination="Jxc-Gs-z3b" id="Lk3-yy-9P2"/>
                         <outlet property="courseTimeBegin" destination="WZ0-2x-GgR" id="0l8-tC-PJT"/>
                         <outlet property="courseTimeEnd" destination="QKy-RA-ZUB" id="Vkv-Oz-nke"/>
                     </connections>

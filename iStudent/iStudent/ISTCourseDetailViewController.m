@@ -40,4 +40,7 @@
 
 - (IBAction)didChangeTerm:(id)sender {
 }
+
+- (IBAction)didChangeSection:(id)sender {
+}
 @end
