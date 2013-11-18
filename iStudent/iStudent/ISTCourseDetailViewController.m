@@ -27,12 +27,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.courseMapLocation.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)mapView:(MKMapView *)mv didUpdateUserLocation:(MKUserLocation *)userLocation {
+    
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = self.courseMapLocation.userLocation.coordinate;
+    mapRegion.span = MKCoordinateSpanMake(0.02, 0.02);
+    [self.courseMapLocation setRegion:mapRegion animated: YES];
 }
 
 - (IBAction)didChangeTaken:(id)sender {
@@ -43,4 +52,5 @@
 
 - (IBAction)didChangeSection:(id)sender {
 }
+
 @end
