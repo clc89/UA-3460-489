@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D793F13183A7B480062228F /* ISTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D793F12183A7B480062228F /* ISTMapViewController.m */; };
 		7D793F15183A7DD40062228F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D793F14183A7DD40062228F /* MapKit.framework */; };
+		7DBD5A68183FFB7100B914F2 /* CourseSeed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD5A67183FFB7100B914F2 /* CourseSeed.plist */; };
 		7DD1BA5E18340D57005436F9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD1BA5D18340D57005436F9 /* CoreData.framework */; };
 		7DD1BA6118340D8E005436F9 /* ISTCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD1BA6018340D8E005436F9 /* ISTCourseDetailViewController.m */; };
 		7DD91AD7182D88E0000AC8AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD91AD6182D88E0000AC8AA /* Foundation.framework */; };
@@ -46,6 +47,7 @@
 		7D793F11183A7B480062228F /* ISTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTMapViewController.h; sourceTree = "<group>"; };
 		7D793F12183A7B480062228F /* ISTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTMapViewController.m; sourceTree = "<group>"; };
 		7D793F14183A7DD40062228F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7DBD5A67183FFB7100B914F2 /* CourseSeed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CourseSeed.plist; sourceTree = "<group>"; };
 		7DD1BA5D18340D57005436F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7DD1BA5F18340D8E005436F9 /* ISTCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTCourseDetailViewController.h; sourceTree = "<group>"; };
 		7DD1BA6018340D8E005436F9 /* ISTCourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTCourseDetailViewController.m; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		7DD91ADD182D88E0000AC8AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7DBD5A67183FFB7100B914F2 /* CourseSeed.plist */,
 				7DD91ADE182D88E0000AC8AA /* iStudent-Info.plist */,
 				7DD91ADF182D88E0000AC8AA /* InfoPlist.strings */,
 				7DD91AE2182D88E0000AC8AA /* main.m */,
@@ -286,6 +289,7 @@
 			files = (
 				7DD91AED182D88E0000AC8AA /* Main_iPad.storyboard in Resources */,
 				7DD91AF5182D88E0000AC8AA /* Images.xcassets in Resources */,
+				7DBD5A68183FFB7100B914F2 /* CourseSeed.plist in Resources */,
 				7DD91AEA182D88E0000AC8AA /* Main_iPhone.storyboard in Resources */,
 				9465108D183F2CEF006322A1 /* rssFeeds.plist in Resources */,
 				7DD91AE1182D88E0000AC8AA /* InfoPlist.strings in Resources */,
