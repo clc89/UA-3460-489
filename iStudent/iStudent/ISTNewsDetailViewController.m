@@ -13,6 +13,19 @@
 @end
 
 @implementation ISTNewsDetailViewController
+{
+    NSArray *news;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showNewsDetail"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ISTNewsDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.nameLabel = [news objectAtIndex:indexPath.row];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +40,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _nameLabel.text = _courseName;
 }
 
 - (void)didReceiveMemoryWarning
