@@ -119,4 +119,9 @@
 
  */
 
+- (IBAction)saveNewFeed:(UIStoryboardSegue *)unwindSegue
+{
+    NSLog(@"%@", [self.NewFeed objectForKey:@"courseName"]);
+}
+
 @end

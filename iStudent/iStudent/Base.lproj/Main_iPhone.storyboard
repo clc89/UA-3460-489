@@ -86,15 +86,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Course Feed" id="qRh-9m-aVN">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="zSX-9c-MFp"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="zSX-9c-MFp">
+                            <connections>
+                                <segue destination="EBQ-bq-6Gm" kind="unwind" unwindAction="saveNewFeed:" id="41g-o1-5lx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancelButton" destination="aKi-Ju-Qjf" id="tC7-lC-wBn"/>
-                        <outlet property="courseNameIn" destination="z50-8V-F1O" id="Xes-gd-qvS"/>
-                        <outlet property="feedUrlIn" destination="Iz7-vU-rNC" id="Nke-W1-Hb3"/>
+                        <outlet property="CancelNew" destination="aKi-Ju-Qjf" id="kqi-rk-bcR"/>
+                        <outlet property="CourseName" destination="z50-8V-F1O" id="zce-Yc-iuk"/>
+                        <outlet property="FeedUrl" destination="Iz7-vU-rNC" id="Sus-x1-0Ky"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Md-7o-C2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EBQ-bq-6Gm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2044" y="-909"/>
         </scene>

@@ -11,4 +11,9 @@
 
 @interface ISTNewsMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
+// dictionary that will hold the new entry from the add feed page
+@property (copy) NSDictionary *NewFeed;
+
+- (IBAction)saveNewFeed:(UIStoryboardSegue *)unwindSegue;
+
 @end

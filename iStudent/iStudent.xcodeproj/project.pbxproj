@@ -83,6 +83,7 @@
 		9465108C183F2CEF006322A1 /* rssFeeds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rssFeeds.plist; sourceTree = "<group>"; };
 		9465108E183F376F006322A1 /* ISTNewsMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTNewsMasterViewController.h; sourceTree = "<group>"; };
 		9465108F183F376F006322A1 /* ISTNewsMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTNewsMasterViewController.m; sourceTree = "<group>"; };
+		94FCE1B51840426E007B8B47 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +115,7 @@
 		7DD91ACA182D88E0000AC8AA = {
 			isa = PBXGroup;
 			children = (
+				94FCE1B51840426E007B8B47 /* Helpers.h */,
 				7DD91ADC182D88E0000AC8AA /* iStudent */,
 				7DD91B01182D88E0000AC8AA /* iStudentTests */,
 				7DD91AD5182D88E0000AC8AA /* Frameworks */,
@@ -154,8 +156,8 @@
 				94337667183F464D00E3E8DF /* CourseNews */,
 				7DD91AF4182D88E0000AC8AA /* Images.xcassets */,
 				7DBD5A69183FFC2D00B914F2 /* Course.xcdatamodeld */,
-				7DBD5A6C183FFD8300B914F2 /* Entity.h */,
 				7DBD5A6D183FFD8300B914F2 /* Entity.m */,
+				7DBD5A6C183FFD8300B914F2 /* Entity.h */,
 				7DD91ADD182D88E0000AC8AA /* Supporting Files */,
 			);
 			path = iStudent;

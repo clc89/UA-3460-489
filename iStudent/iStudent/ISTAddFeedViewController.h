@@ -10,10 +10,12 @@
 
 @interface ISTAddFeedViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *courseNameIn;
+@property (weak, nonatomic) IBOutlet UITextField *CourseName;
 
-@property (weak, nonatomic) IBOutlet UITextField *feedUrlIn;
 
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UITextField *FeedUrl;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *CancelNew;
 
 @end

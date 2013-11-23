@@ -7,6 +7,8 @@
 //
 
 #import "ISTAddFeedViewController.h"
+#import "ISTNewsMasterViewController.h"
+#import "Helpers.h"
 
 @interface ISTAddFeedViewController ()
 
@@ -33,6 +35,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ISTNewsMasterViewController *master = (ISTNewsMasterViewController *)[segue destinationViewController];
+    
+    NSString *courseKey = FEED_COURSE_NAME_KEY;
+    NSString *urlKey = FEED_URL_KEY;
+    
+    master.NewFeed = [[NSDictionary alloc] initWithObjectsAndKeys:self.CourseName.text, courseKey, self.FeedUrl.text, urlKey, nil];
 }
 
 @end
