@@ -1,28 +1,18 @@
 //
-//  ISTNewsMasterViewController.m
+//  ISTNewsTableViewController.m
 //  iStudent
 //
-//  Created by Ryan McCafferty on 11/22/13.
+//  Created by Ryan McCafferty on 11/24/13.
 //  Copyright (c) 2013 University of Akron. All rights reserved.
 //
 
-#import "ISTNewsMasterViewController.h"
-#import "Helpers.h"
 #import "ISTNewsTableViewController.h"
+#import "Helpers.h"
 
-@interface ISTNewsMasterViewController () {
-    // private dictionary field that will hold the contents of the
-    // rssFeeds plist
-    NSMutableArray *feeds;
-    
-    // private string field that will hold the path to the rssFeeds
-    // plist file
-    NSString *feedsPlistPath;
-}
-
+@interface ISTNewsTableViewController () 
 @end
 
-@implementation ISTNewsMasterViewController
+@implementation ISTNewsTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,23 +32,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = [self.Feed objectForKey:FEED_COURSE_NAME_KEY];
+    self.navigationItem.backBarButtonItem.title = @"";
     
-    // load in the plist of rss feeds
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
-    NSString *docPath = [paths objectAtIndex:0];
-    self->feedsPlistPath = [docPath stringByAppendingString:FEED_PLIST_NAME];
-    NSString *plistPath = self->feedsPlistPath;
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
-        plistPath = [[NSBundle mainBundle] pathForResource:FEED_PLIST_NAME ofType:@"plist"];
-    }
-    feeds = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
-    
-    // registers this table to be able to reuse cells
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    
-    // sets the back button for the next view to only be the left pointing arrow with no title
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,30 +45,28 @@
 
 #pragma mark - Table view data source
 
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return feeds.count;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [[feeds objectAtIndex:indexPath.row] objectForKey:FEED_COURSE_NAME_KEY];
+    
     return cell;
-}
-
--(void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"displayCourseNews" sender:self];
 }
 
 /*
@@ -145,24 +119,5 @@
 }
 
  */
-
-- (IBAction)saveNewFeed:(UIStoryboardSegue *)unwindSegue
-{
-    [feeds addObject:self.NewFeed];
-    [feeds writeToFile:self->feedsPlistPath atomically:YES];
-    [self.tableView reloadData];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSLog(@"%@", @"preparing for segue");
-    if ([[segue identifier] isEqualToString:@"displayCourseNews"]) {
-        
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        id object = feeds[indexPath.row];
-        [[segue destinationViewController] setFeed:object];
-        
-    }
-}
 
 @end

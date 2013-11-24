@@ -33,6 +33,7 @@
 		9433766D183F46DC00E3E8DF /* ISTNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9433766C183F46DC00E3E8DF /* ISTNewsDetailViewController.m */; };
 		9465108D183F2CEF006322A1 /* rssFeeds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9465108C183F2CEF006322A1 /* rssFeeds.plist */; };
 		94651090183F376F006322A1 /* ISTNewsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9465108F183F376F006322A1 /* ISTNewsMasterViewController.m */; };
+		94D501921841F67400F7CA54 /* ISTNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D501911841F67400F7CA54 /* ISTNewsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +84,9 @@
 		9465108C183F2CEF006322A1 /* rssFeeds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rssFeeds.plist; sourceTree = "<group>"; };
 		9465108E183F376F006322A1 /* ISTNewsMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTNewsMasterViewController.h; sourceTree = "<group>"; };
 		9465108F183F376F006322A1 /* ISTNewsMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTNewsMasterViewController.m; sourceTree = "<group>"; };
-		94FCE1B51840426E007B8B47 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		94A1DD4D18413B330084A1C7 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		94D501901841F67400F7CA54 /* ISTNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTNewsTableViewController.h; sourceTree = "<group>"; };
+		94D501911841F67400F7CA54 /* ISTNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTNewsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +118,6 @@
 		7DD91ACA182D88E0000AC8AA = {
 			isa = PBXGroup;
 			children = (
-				94FCE1B51840426E007B8B47 /* Helpers.h */,
 				7DD91ADC182D88E0000AC8AA /* iStudent */,
 				7DD91B01182D88E0000AC8AA /* iStudentTests */,
 				7DD91AD5182D88E0000AC8AA /* Frameworks */,
@@ -159,6 +161,7 @@
 				7DBD5A6D183FFD8300B914F2 /* Entity.m */,
 				7DBD5A6C183FFD8300B914F2 /* Entity.h */,
 				7DD91ADD182D88E0000AC8AA /* Supporting Files */,
+				94A1DD4D18413B330084A1C7 /* Helpers.h */,
 			);
 			path = iStudent;
 			sourceTree = "<group>";
@@ -216,6 +219,8 @@
 				94337669183F46B700E3E8DF /* ISTAddFeedViewController.m */,
 				9433766B183F46DC00E3E8DF /* ISTNewsDetailViewController.h */,
 				9433766C183F46DC00E3E8DF /* ISTNewsDetailViewController.m */,
+				94D501901841F67400F7CA54 /* ISTNewsTableViewController.h */,
+				94D501911841F67400F7CA54 /* ISTNewsTableViewController.m */,
 			);
 			name = CourseNews;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				9433766A183F46B700E3E8DF /* ISTAddFeedViewController.m in Sources */,
 				7DD91AE3182D88E0000AC8AA /* main.m in Sources */,
 				7DD91AE7182D88E0000AC8AA /* ISTAppDelegate.m in Sources */,
+				94D501921841F67400F7CA54 /* ISTNewsTableViewController.m in Sources */,
 				7DBD5A6B183FFC2D00B914F2 /* Course.xcdatamodeld in Sources */,
 				94651090183F376F006322A1 /* ISTNewsMasterViewController.m in Sources */,
 				7DD91AF3182D88E0000AC8AA /* ISTCourseMasterViewController.m in Sources */,

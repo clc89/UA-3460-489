@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface ISTNewsMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface ISTNewsMasterViewController : UITableViewController
 
 // dictionary that will hold the new entry from the add feed page
 @property (copy) NSDictionary *NewFeed;

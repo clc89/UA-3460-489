@@ -20,9 +20,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="jCG-ik-4NJ" kind="push" identifier="showNewsDetail" id="qob-42-HDo"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -33,6 +30,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="iOs-1Q-zuE" kind="push" identifier="displayCourseNews" id="7QZ-83-oiH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0se-KZ-ZXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -324,6 +324,35 @@
             </objects>
             <point key="canvasLocation" x="1655" y="576"/>
         </scene>
+        <!--News Table View Controller - Title-->
+        <scene sceneID="Ybg-1p-UFo">
+            <objects>
+                <tableViewController id="iOs-1Q-zuE" customClass="ISTNewsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="g7s-dH-jOo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VOU-pd-6Fz">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VOU-pd-6Fz" id="P9M-HM-ZPE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iOs-1Q-zuE" id="oOP-Ta-DUf"/>
+                            <outlet property="delegate" destination="iOs-1Q-zuE" id="oKS-12-a9W"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="gyJ-hy-oSu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7x-ru-6o5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2179" y="-203"/>
+        </scene>
         <!--News Detail View Controller - News-->
         <scene sceneID="P5F-QH-GBh">
             <objects>
@@ -373,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pD-hw-nuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044" y="-146"/>
+            <point key="canvasLocation" x="2865" y="-208"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8fe-64-lK8">
