@@ -61,10 +61,10 @@
     NSArray *courses = self.courseList[@"courses"];
     NSLog(@"%@", indexPath);
     NSDictionary *thisCourse = courses[0];
-    //NSString *thisCourseNumber = [[NSString alloc] initWithFormat:@"%@:%@", [thisCourse valueForKey:@"subject"], [thisCourse valueForKey:@"number"]];
+    NSString *thisCourseNumber = [[NSString alloc] initWithFormat:@"%@:%@", [thisCourse valueForKey:@"subject"], [thisCourse valueForKey:@"number"]];
     
     cell.textLabel.text = [[thisCourse valueForKey:@"name"] description];
-    //cell.detailTextLabel.text = [[thisCourse valueForKey:@"presentationStyle"] description];
+    cell.detailTextLabel.text = thisCourseNumber;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
