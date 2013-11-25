@@ -15,4 +15,18 @@
 
 #define FEED_PLIST_NAME @"rssFeeds"
 
+#define RSS_ROOT @"rss"
+
+#define ATOM_ROOT @"feed"
+
+#define ATOM_CONTENT @"content"
+
+#define ATOM_TITLE @"title"
+
+#define ATOM_DESCRIPTION @"summary"
+
+#define ATOM_PUB_DATE @"updated"
+
+#define ATOM_ENTRY_TAG @"entry"
+
 #endif

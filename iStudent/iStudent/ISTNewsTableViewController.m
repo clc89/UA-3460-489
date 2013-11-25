@@ -8,8 +8,20 @@
 
 #import "ISTNewsTableViewController.h"
 #import "Helpers.h"
+#import "FeedElement.h"
 
-@interface ISTNewsTableViewController () 
+@interface ISTNewsTableViewController () {
+    NSXMLParser *feedData;
+    NSURL *feedUrl;
+    
+    // keeps track of the current element while parsing the feed
+    NSString *parserCurrentElement;
+    // accumulates content of the feed
+    NSString *contentAccumulator;
+    
+    NSMutableArray *entryArray;
+    FeedElement *tempEntry;
+}
 @end
 
 @implementation ISTNewsTableViewController
@@ -33,8 +45,11 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = [self.Feed objectForKey:FEED_COURSE_NAME_KEY];
-    self.navigationItem.backBarButtonItem.title = @"";
-    
+    parserCurrentElement = @"";
+    entryArray = [NSMutableArray array];
+    tempEntry = [[FeedElement alloc] init];
+    [self beginParsingFeed:[self.Feed objectForKey:FEED_URL_KEY]];
+ 
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,7 +71,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return entryArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,6 +80,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = [entryArray objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -119,5 +135,59 @@
 }
 
  */
+
+-(void)beginParsingFeed:(NSString *)url
+{
+    feedUrl = [[NSURL alloc] initWithString:url];
+    feedData = [[NSXMLParser alloc] initWithContentsOfURL:feedUrl];
+    [feedData setDelegate:self];
+    [feedData parse];
+    
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict
+{
+    if ([elementName isEqualToString:ATOM_CONTENT]) {
+        // new element that is currently being visited by the parser is the content element, set it to
+        // be the value of the parserCurrentElement variable
+        parserCurrentElement = elementName;
+    }
+    
+    // if parserCurrentElement is content, instead of switching elements, add the text
+    // of any elements to the contentAccumulator until the end of the content element is found
+    if ([parserCurrentElement isEqualToString:ATOM_CONTENT]) {
+        // since still in the content of the feed, add the current element tag to the contentAccumulator
+        contentAccumulator = [contentAccumulator stringByAppendingString:elementName];
+    } else {
+        // not within in the content of the page, change currentElement
+        parserCurrentElement = elementName;
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
+{
+    if ([parserCurrentElement isEqualToString:ATOM_CONTENT]) {
+        contentAccumulator = [contentAccumulator stringByAppendingString:string];
+    } else if ([parserCurrentElement isEqualToString:ATOM_TITLE]) {
+        tempEntry.Title = string;
+    } else if ([parserCurrentElement isEqualToString:ATOM_DESCRIPTION]) {
+        tempEntry.Description = string;
+    } else if ([parserCurrentElement isEqualToString:ATOM_PUB_DATE]) {
+        tempEntry.PublicationDate = string;
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
+{
+    if ([elementName isEqualToString:ATOM_CONTENT]) {
+        tempEntry.Content = contentAccumulator;
+        contentAccumulator = @"";
+        parserCurrentElement = @"";
+    } else if ([elementName isEqualToString:ATOM_ENTRY_TAG]) {
+        [entryArray addObject:tempEntry];
+        NSLog(@"%@", tempEntry.Title);
+        [tempEntry reset];
+    }
+}
 
 @end

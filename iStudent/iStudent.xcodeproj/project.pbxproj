@@ -29,6 +29,7 @@
 		7DD91AFE182D88E0000AC8AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD91ADA182D88E0000AC8AA /* UIKit.framework */; };
 		7DD91B06182D88E0000AC8AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DD91B04182D88E0000AC8AA /* InfoPlist.strings */; };
 		7DD91B08182D88E0000AC8AA /* iStudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD91B07182D88E0000AC8AA /* iStudentTests.m */; };
+		942F04691842C43000DEBCF7 /* FeedElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 942F04681842C43000DEBCF7 /* FeedElement.m */; };
 		9433766A183F46B700E3E8DF /* ISTAddFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94337669183F46B700E3E8DF /* ISTAddFeedViewController.m */; };
 		9433766D183F46DC00E3E8DF /* ISTNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9433766C183F46DC00E3E8DF /* ISTNewsDetailViewController.m */; };
 		9465108D183F2CEF006322A1 /* rssFeeds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9465108C183F2CEF006322A1 /* rssFeeds.plist */; };
@@ -77,6 +78,8 @@
 		7DD91B03182D88E0000AC8AA /* iStudentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iStudentTests-Info.plist"; sourceTree = "<group>"; };
 		7DD91B05182D88E0000AC8AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7DD91B07182D88E0000AC8AA /* iStudentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iStudentTests.m; sourceTree = "<group>"; };
+		942F04671842C43000DEBCF7 /* FeedElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedElement.h; sourceTree = "<group>"; };
+		942F04681842C43000DEBCF7 /* FeedElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedElement.m; sourceTree = "<group>"; };
 		94337668183F46B700E3E8DF /* ISTAddFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTAddFeedViewController.h; sourceTree = "<group>"; };
 		94337669183F46B700E3E8DF /* ISTAddFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTAddFeedViewController.m; sourceTree = "<group>"; };
 		9433766B183F46DC00E3E8DF /* ISTNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTNewsDetailViewController.h; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				9433766C183F46DC00E3E8DF /* ISTNewsDetailViewController.m */,
 				94D501901841F67400F7CA54 /* ISTNewsTableViewController.h */,
 				94D501911841F67400F7CA54 /* ISTNewsTableViewController.m */,
+				942F04671842C43000DEBCF7 /* FeedElement.h */,
+				942F04681842C43000DEBCF7 /* FeedElement.m */,
 			);
 			name = CourseNews;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 			files = (
 				7DBD5A6E183FFD8300B914F2 /* Entity.m in Sources */,
 				7D793F13183A7B480062228F /* ISTMapViewController.m in Sources */,
+				942F04691842C43000DEBCF7 /* FeedElement.m in Sources */,
 				9433766A183F46B700E3E8DF /* ISTAddFeedViewController.m in Sources */,
 				7DD91AE3182D88E0000AC8AA /* main.m in Sources */,
 				7DD91AE7182D88E0000AC8AA /* ISTAppDelegate.m in Sources */,

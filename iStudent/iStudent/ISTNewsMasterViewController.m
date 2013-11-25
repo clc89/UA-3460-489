@@ -155,7 +155,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"%@", @"preparing for segue");
     if ([[segue identifier] isEqualToString:@"displayCourseNews"]) {
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
