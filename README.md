@@ -17,3 +17,8 @@ to allow users to manually track what courses they have already taken and what c
 The app will provide information from several different sources in one centralized location and present it in a more easily read format.
 
 The app will use external data from springboard and instructors' websites and possibly from twitter.
+
+
+**NOTE:** I think you guys may need to add your GitHub email address to your local git configuration so that your commits show up on the graphs page; [see this GitHub doc](https://help.github.com/articles/why-are-my-commits-linked-to-the-wrong-user)
+
+    git config --global user.email "me@here.com"
