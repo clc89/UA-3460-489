@@ -17,16 +17,6 @@
     NSArray *news;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"showNewsDetail"])
-    {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        ISTNewsDetailViewController *destViewController = segue.destinationViewController;
-        destViewController.nameLabel = [news objectAtIndex:indexPath.row];
-    }
-}
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,7 +30,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    _nameLabel.text = _courseName;
+    self.navigationItem.title = self.NewsItem.Title;
+    self.DateLabel.text = self.NewsItem.PublicationDate;
+    [self.ContentViewer loadHTMLString:self.NewsItem.Content baseURL:NULL];
 }
 
 - (void)didReceiveMemoryWarning

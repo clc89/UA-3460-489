@@ -7,16 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FeedElement.h"
 
 @interface ISTNewsDetailViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *buttonLabel;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UIButton *siteButton;
-@property (weak, nonatomic) IBOutlet UITextView *newsText;
+@property (weak, nonatomic) IBOutlet UIWebView *ContentViewer;
 
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *DateLabel;
 
-@property (weak, nonatomic) NSString *courseName;
+@property (retain) FeedElement *NewsItem;
 
 @end

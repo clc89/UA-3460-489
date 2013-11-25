@@ -9,6 +9,7 @@
 #import "ISTNewsTableViewController.h"
 #import "Helpers.h"
 #import "FeedElement.h"
+#import "ISTNewsDetailViewController.h"
 
 @interface ISTNewsTableViewController () {
     NSXMLParser *feedData;
@@ -45,9 +46,11 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = [self.Feed objectForKey:FEED_COURSE_NAME_KEY];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     parserCurrentElement = @"";
     entryArray = [NSMutableArray array];
     tempEntry = [[FeedElement alloc] init];
+    contentAccumulator = @"";
     [self beginParsingFeed:[self.Feed objectForKey:FEED_URL_KEY]];
  
 }
@@ -58,13 +61,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"displayNewsItemDetail" sender:self];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -80,51 +88,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [entryArray objectAtIndex:indexPath.row];
+    FeedElement *x = (FeedElement *)[entryArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = x.Title;
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -132,9 +102,15 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"displayNewsItemDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        id object = entryArray[indexPath.row];
+        [[segue destinationViewController] setNewsItem:object];
+        
+    }
+    
 }
 
- */
 
 -(void)beginParsingFeed:(NSString *)url
 {
@@ -185,8 +161,11 @@
         parserCurrentElement = @"";
     } else if ([elementName isEqualToString:ATOM_ENTRY_TAG]) {
         [entryArray addObject:tempEntry];
-        NSLog(@"%@", tempEntry.Title);
-        [tempEntry reset];
+        tempEntry = [[FeedElement alloc] init];
+    } else if ([elementName isEqualToString:ATOM_DESCRIPTION] ||
+               [elementName isEqualToString:ATOM_PUB_DATE] ||
+               [elementName isEqualToString:ATOM_TITLE]) {
+        parserCurrentElement = @"";
     }
 }
 

@@ -9,15 +9,17 @@
 #import "ISTNewsMasterViewController.h"
 #import "Helpers.h"
 #import "ISTNewsTableViewController.h"
+#import "FeedElement.h"
 
 @interface ISTNewsMasterViewController () {
     // private dictionary field that will hold the contents of the
     // rssFeeds plist
     NSMutableArray *feeds;
-    
     // private string field that will hold the path to the rssFeeds
     // plist file
     NSString *feedsPlistPath;
+    
+    
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ISTNewsTableViewController : UITableViewController<NSXMLParserDelegate>
+@interface ISTNewsTableViewController : UITableViewController<NSXMLParserDelegate, UITableViewDelegate>
 
 // selected entry of the rssFeeds.plist file
 @property (copy) NSDictionary *Feed;
