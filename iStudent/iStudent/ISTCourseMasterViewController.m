@@ -24,7 +24,8 @@
     self.courseList = [[NSDictionary alloc] init];
     self.courseList = [self.reader initializeDataFrompList];
     
-    NSLog(@"< %@", self.courseList.allKeys);
+    // It is better to use this format for NSLog (constant string literal)
+    //NSLog(@"< %@", self.courseList.allKeys);
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,14 +41,31 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    NSArray *courses = self.courseList[@"courses"];
+    return [courses count];
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-//    [self configureCell:cell atIndexPath:indexPath];
-//    return cell;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CourseCell" forIndexPath:indexPath];
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    //
+    // TODO: Fix this, just stubbed in
+    //
+    
+    //NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSArray *courses = self.courseList[@"courses"];
+    NSLog(@"%@", indexPath);
+    NSDictionary *thisCourse = courses[0];
+    //NSString *thisCourseNumber = [[NSString alloc] initWithFormat:@"%@:%@", [thisCourse valueForKey:@"subject"], [thisCourse valueForKey:@"number"]];
+    
+    cell.textLabel.text = [[thisCourse valueForKey:@"name"] description];
+    //cell.detailTextLabel.text = [[thisCourse valueForKey:@"presentationStyle"] description];
+}
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
