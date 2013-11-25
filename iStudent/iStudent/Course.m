@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 University of Akron. All rights reserved.
 //
 
-#import "Entity.h"
+#import "Course.h"
 
 
-@implementation Entity
+@implementation Course
 
 @dynamic subject;
 @dynamic number;

@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface Entity : NSManagedObject
+@interface Course : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * subject;
 @property (nonatomic, retain) NSNumber * number;

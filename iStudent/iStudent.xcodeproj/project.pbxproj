@@ -11,7 +11,7 @@
 		7D793F15183A7DD40062228F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D793F14183A7DD40062228F /* MapKit.framework */; };
 		7DBD5A68183FFB7100B914F2 /* CourseSeed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD5A67183FFB7100B914F2 /* CourseSeed.plist */; };
 		7DBD5A6B183FFC2D00B914F2 /* Course.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD5A69183FFC2D00B914F2 /* Course.xcdatamodeld */; };
-		7DBD5A6E183FFD8300B914F2 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD5A6D183FFD8300B914F2 /* Entity.m */; };
+		7DBD5A6E183FFD8300B914F2 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD5A6D183FFD8300B914F2 /* Course.m */; };
 		7DD1BA5E18340D57005436F9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD1BA5D18340D57005436F9 /* CoreData.framework */; };
 		7DD1BA6118340D8E005436F9 /* ISTCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD1BA6018340D8E005436F9 /* ISTCourseDetailViewController.m */; };
 		7DD91AD7182D88E0000AC8AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD91AD6182D88E0000AC8AA /* Foundation.framework */; };
@@ -53,8 +53,8 @@
 		7D793F14183A7DD40062228F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7DBD5A67183FFB7100B914F2 /* CourseSeed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CourseSeed.plist; sourceTree = "<group>"; };
 		7DBD5A6A183FFC2D00B914F2 /* Course.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Course.xcdatamodel; sourceTree = "<group>"; };
-		7DBD5A6C183FFD8300B914F2 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
-		7DBD5A6D183FFD8300B914F2 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		7DBD5A6C183FFD8300B914F2 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		7DBD5A6D183FFD8300B914F2 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		7DD1BA5D18340D57005436F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7DD1BA5F18340D8E005436F9 /* ISTCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTCourseDetailViewController.h; sourceTree = "<group>"; };
 		7DD1BA6018340D8E005436F9 /* ISTCourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTCourseDetailViewController.m; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 				94337667183F464D00E3E8DF /* CourseNews */,
 				7DD91AF4182D88E0000AC8AA /* Images.xcassets */,
 				7DBD5A69183FFC2D00B914F2 /* Course.xcdatamodeld */,
-				7DBD5A6D183FFD8300B914F2 /* Entity.m */,
-				7DBD5A6C183FFD8300B914F2 /* Entity.h */,
+				7DBD5A6D183FFD8300B914F2 /* Course.m */,
+				7DBD5A6C183FFD8300B914F2 /* Course.h */,
 				7DD91ADD182D88E0000AC8AA /* Supporting Files */,
 				94A1DD4D18413B330084A1C7 /* Helpers.h */,
 			);
@@ -331,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DBD5A6E183FFD8300B914F2 /* Entity.m in Sources */,
+				7DBD5A6E183FFD8300B914F2 /* Course.m in Sources */,
 				7D793F13183A7B480062228F /* ISTMapViewController.m in Sources */,
 				942F04691842C43000DEBCF7 /* FeedElement.m in Sources */,
 				9433766A183F46B700E3E8DF /* ISTAddFeedViewController.m in Sources */,
