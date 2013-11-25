@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "CourseReader.h"
 
 @interface ISTCourseMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSDictionary *courseList;
-
+@property (strong, nonatomic) CourseReader *reader;
 @end
