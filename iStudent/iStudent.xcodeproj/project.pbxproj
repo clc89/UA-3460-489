@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0076FB741842F743007DB12A /* CourseReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0076FB731842F743007DB12A /* CourseReader.m */; };
 		7D793F13183A7B480062228F /* ISTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D793F12183A7B480062228F /* ISTMapViewController.m */; };
 		7D793F15183A7DD40062228F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D793F14183A7DD40062228F /* MapKit.framework */; };
 		7DBD5A68183FFB7100B914F2 /* CourseSeed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD5A67183FFB7100B914F2 /* CourseSeed.plist */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0076FB721842F743007DB12A /* CourseReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseReader.h; sourceTree = "<group>"; };
+		0076FB731842F743007DB12A /* CourseReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseReader.m; sourceTree = "<group>"; };
 		7D793F11183A7B480062228F /* ISTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTMapViewController.h; sourceTree = "<group>"; };
 		7D793F12183A7B480062228F /* ISTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTMapViewController.m; sourceTree = "<group>"; };
 		7D793F14183A7DD40062228F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -165,6 +168,8 @@
 				7DBD5A6C183FFD8300B914F2 /* Course.h */,
 				7DD91ADD182D88E0000AC8AA /* Supporting Files */,
 				94A1DD4D18413B330084A1C7 /* Helpers.h */,
+				0076FB721842F743007DB12A /* CourseReader.h */,
+				0076FB731842F743007DB12A /* CourseReader.m */,
 			);
 			path = iStudent;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				94651090183F376F006322A1 /* ISTNewsMasterViewController.m in Sources */,
 				7DD91AF3182D88E0000AC8AA /* ISTCourseMasterViewController.m in Sources */,
 				7DD1BA6118340D8E005436F9 /* ISTCourseDetailViewController.m in Sources */,
+				0076FB741842F743007DB12A /* CourseReader.m in Sources */,
 				9433766D183F46DC00E3E8DF /* ISTNewsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
