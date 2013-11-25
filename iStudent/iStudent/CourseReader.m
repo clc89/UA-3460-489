@@ -8,27 +8,11 @@
 
 #import "CourseReader.h"
 
-
-@interface CourseReader (){
-    NSString* documentPlistPath;
-}
--(NSDictionary *)initializeDataFrompList;
-@end
-
 @implementation CourseReader
 
 
 -(NSDictionary *)initializeDataFrompList{
-    
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString* documentsPath = [paths objectAtIndex:0];
-    self->documentPlistPath = [documentsPath stringByAppendingString:@"Data"];
-    NSString* plistPath = self->documentPlistPath;
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
-        plistPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
-    }
-    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"CourseSeed" ofType:@"plist"];
     NSDictionary *courseData = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
     
     return courseData;

@@ -168,8 +168,6 @@
 				7DBD5A6C183FFD8300B914F2 /* Course.h */,
 				7DD91ADD182D88E0000AC8AA /* Supporting Files */,
 				94A1DD4D18413B330084A1C7 /* Helpers.h */,
-				0076FB721842F743007DB12A /* CourseReader.h */,
-				0076FB731842F743007DB12A /* CourseReader.m */,
 			);
 			path = iStudent;
 			sourceTree = "<group>";
@@ -214,6 +212,8 @@
 				7DD1BA6018340D8E005436F9 /* ISTCourseDetailViewController.m */,
 				7D793F11183A7B480062228F /* ISTMapViewController.h */,
 				7D793F12183A7B480062228F /* ISTMapViewController.m */,
+				0076FB721842F743007DB12A /* CourseReader.h */,
+				0076FB731842F743007DB12A /* CourseReader.m */,
 			);
 			name = Courses;
 			sourceTree = "<group>";

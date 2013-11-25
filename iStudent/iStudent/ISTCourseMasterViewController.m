@@ -18,9 +18,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // You must allocate memory and initialize these first -- Stoll
+    self.reader = [[CourseReader alloc] init];
+    self.courseList = [[NSDictionary alloc] init];
     self.courseList = [self.reader initializeDataFrompList];
     
-    NSLog(self.courseList.allKeys);
+    NSLog(@"< %@", self.courseList.allKeys);
 }
 
 - (void)didReceiveMemoryWarning
