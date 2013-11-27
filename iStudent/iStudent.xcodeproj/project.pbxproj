@@ -283,6 +283,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "University of Akron";
 				TargetAttributes = {
+					7DD91AD2182D88E0000AC8AA = {
+						DevelopmentTeam = 3FT8PS6NT6;
+					};
 					7DD91AF9182D88E0000AC8AA = {
 						TestTargetID = 7DD91AD2182D88E0000AC8AA;
 					};
@@ -485,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iStudent/iStudent-Prefix.pch";
 				INFOPLIST_FILE = "iStudent/iStudent-Info.plist";
@@ -498,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iStudent/iStudent-Prefix.pch";
 				INFOPLIST_FILE = "iStudent/iStudent-Info.plist";
