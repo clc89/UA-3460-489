@@ -14,6 +14,7 @@
 @property (strong, nonatomic) id courseItem;
 
 @property (weak, nonatomic) IBOutlet UISwitch *courseTaken;
+
 @property (weak, nonatomic) IBOutlet UILabel *courseNumber;
 @property (weak, nonatomic) IBOutlet UILabel *courseName;
 @property (weak, nonatomic) IBOutlet UILabel *courseArea;

@@ -27,6 +27,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    if (self.courseItem) {
+        NSString *thisCourseNumber = [[NSString alloc] initWithFormat:@"%@:%@", [self.courseItem valueForKey:@"subject"], [self.courseItem valueForKey:@"number"]];
+        
+        [self.courseNumber setText:thisCourseNumber];
+        [self.courseName setText:[[self.courseItem valueForKey:@"name"] description]];
+        [self.courseArea setText:@""];
+        [self.courseRequired setText:@""];
+        
+        [self.courseInstructor setText:@""];
+        [self.courseTimeBegin setText:@""];
+        [self.courseTimeEnd setText:@""];
+        [self.courseLocation setText:@""];
+    }
+    
     self.courseMapLocation.delegate = self;
 }
 
