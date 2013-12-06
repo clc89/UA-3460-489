@@ -1,8 +1,8 @@
 //
-//  Entity.m
+//  Course.m
 //  iStudent
 //
-//  Created by Christopher Stoll on 11/22/13.
+//  Created by Christopher Stoll on 12/6/13.
 //  Copyright (c) 2013 University of Akron. All rights reserved.
 //
 
@@ -11,9 +11,11 @@
 
 @implementation Course
 
-@dynamic subject;
-@dynamic number;
-@dynamic name;
 @dynamic credits;
+@dynamic name;
+@dynamic number;
+@dynamic subject;
+@dynamic area;
+@dynamic required;
 
 @end

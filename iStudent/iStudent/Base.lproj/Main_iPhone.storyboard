@@ -156,7 +156,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="RcF-9L-Qrw" kind="push" id="onh-Z2-WlU"/>
+                                    <segue destination="RcF-9L-Qrw" kind="push" identifier="courseDetailSegue" id="onh-Z2-WlU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

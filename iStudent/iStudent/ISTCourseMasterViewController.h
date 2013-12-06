@@ -12,6 +12,10 @@
 
 @interface ISTCourseMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @property (strong, nonatomic) NSDictionary *courseList;
 @property (strong, nonatomic) CourseReader *reader;
+
 @end
