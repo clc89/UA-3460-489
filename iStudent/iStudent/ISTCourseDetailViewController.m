@@ -60,9 +60,15 @@
 -(void)mapView:(MKMapView *)mv didUpdateUserLocation:(MKUserLocation *)userLocation {
     
     MKCoordinateRegion mapRegion;
-    mapRegion.center = self.courseMapLocation.userLocation.coordinate;
-    mapRegion.span = MKCoordinateSpanMake(0.02, 0.02);
+    mapRegion.center = CLLocationCoordinate2DMake(41.077810, -81.510623);;
+    mapRegion.span = MKCoordinateSpanMake(0.005, 0.005);
     [self.courseMapLocation setRegion:mapRegion animated: YES];
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    annotation.coordinate = CLLocationCoordinate2DMake(41.077810, -81.510623);
+    annotation.title = @"iOS Development";
+    annotation.subtitle = @"CAS 143";
+    [self.courseMapLocation addAnnotation:annotation];
 }
 
 - (IBAction)didChangeTaken:(id)sender {

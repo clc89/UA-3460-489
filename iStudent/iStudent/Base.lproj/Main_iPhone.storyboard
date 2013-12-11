@@ -395,10 +395,10 @@
             </objects>
             <point key="canvasLocation" x="2864" y="-203"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="8fe-64-lK8">
             <objects>
-                <viewController id="exT-9X-srf" sceneMemberID="viewController">
+                <viewController id="exT-9X-srf" customClass="ISTMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jdj-rt-tIc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -411,6 +411,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="B1U-pw-vXI"/>
+                    <connections>
+                        <outlet property="courseMapLocation" destination="qvc-Ve-BRJ" id="cEc-AU-Qi6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSy-uU-N6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
