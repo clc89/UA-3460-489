@@ -173,8 +173,11 @@
     
     cell.textLabel.text = [[object valueForKey:@"name"] description];
     cell.detailTextLabel.text = thisCourseNumber;
-    if ([[[object valueForKey:@"name"] description]  isEqual: @"1"]) {
+    
+    if ([[object valueForKey:@"taken"]  isEqual:@YES]) {
         cell.imageView.image = [UIImage imageNamed:@"check"];
+    }else{
+        cell.imageView.image = [UIImage imageNamed:@"x"];
     }
 }
 
@@ -201,6 +204,8 @@
             [newManagedObject setValue:course[@"subject"] forKey:@"subject"];
             [newManagedObject setValue:course[@"credits"] forKey:@"credits"];
             [newManagedObject setValue:course[@"description"] forKey:@"desc"];
+            [newManagedObject setValue:NO forKey:@"required"];
+            [newManagedObject setValue:NO forKey:@"taken"];
         }
         
         // Save the context.

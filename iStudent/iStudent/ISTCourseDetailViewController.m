@@ -40,6 +40,12 @@
         [self.courseTimeBegin setText:@""];
         [self.courseTimeEnd setText:@""];
         [self.courseLocation setText:@""];
+        
+        if ([[self.courseItem valueForKey:@"taken"]  isEqual:@YES]) {
+            [self.courseTaken setOn:YES animated:YES];
+        }else{
+            [self.courseTaken setOn:NO];
+        }
     }
     
     self.courseMapLocation.delegate = self;
@@ -60,12 +66,18 @@
 }
 
 - (IBAction)didChangeTaken:(id)sender {
+    if ([sender isOn]) {
+        [self.courseItem setValue:@YES forKey:@"taken"];
+    }else{
+        [self.courseItem setValue:@NO forKey:@"taken"];
+    }
 }
 
 - (IBAction)didChangeTerm:(id)sender {
 }
 
 - (IBAction)didChangeSection:(id)sender {
+    
 }
 
 @end
