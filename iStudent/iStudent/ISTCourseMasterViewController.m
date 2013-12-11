@@ -31,6 +31,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(courseContextProvided:) name:@"courseContextProvided" object:nil];
     // notify the delagate we are looking for context
     [[NSNotificationCenter defaultCenter] postNotificationName:@"provideCourseContext" object:self];
+    
+    self.filteredCourseArray = [NSMutableArray arrayWithCapacity:[[self.fetchedResultsController fetchedObjects] count]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,14 +48,43 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        NSLog(@"%lu", (unsigned long)[self.filteredCourseArray count]);
+        return [self.filteredCourseArray count];
+    } else {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+        return [sectionInfo numberOfObjects];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CourseCell" forIndexPath:indexPath];
-    [self configureCell:cell atIndexPath:indexPath];
-    return cell;
+    // Check to see whether the normal table or search results table is being displayed and set the Candy object from the appropriate array
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        NSLog(@"here");
+        static NSString *CellIdentifier = @"Cell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if ( cell == nil ) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        }
+        
+        // Configure the cell
+        
+        NSArray *allItems = [[NSArray alloc] init];
+        allItems = [self.fetchedResultsController fetchedObjects];
+        
+        NSManagedObject *object = [allItems objectAtIndex:indexPath.row];
+        NSString *thisCourseNumber = [[NSString alloc] initWithFormat:@"%@:%@", [object valueForKey:@"subject"], [object valueForKey:@"number"]];
+        
+        cell.textLabel.text = [[object valueForKey:@"name"] description];
+        cell.detailTextLabel.text = thisCourseNumber;
+        
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        return cell;
+    } else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CourseCell" forIndexPath:indexPath];
+        [self configureCell:cell atIndexPath:indexPath];
+        return cell;
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -68,9 +99,21 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"courseDetailSegue"]){
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setCourseItem:object];
+        if(sender == self.searchDisplayController.searchResultsTableView) {
+            NSLog(@"new");
+            NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            
+            NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+            [[segue destinationViewController] setCourseItem:object];
+            
+            NSString *destinationTitle = [[self.filteredCourseArray objectAtIndex:[indexPath row]] name];
+            [[segue destinationViewController] setTitle:destinationTitle];
+        } else {
+            NSLog(@"old");
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+            NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+            [[segue destinationViewController] setCourseItem:object];
+        }
     }
 }
 
@@ -198,13 +241,13 @@
         for (NSDictionary *course in courses) {
             NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
             
-            [newManagedObject setValue:course[@"subject"] forKey:@"subject"];
-            [newManagedObject setValue:course[@"number"] forKey:@"number"];
-            [newManagedObject setValue:course[@"name"] forKey:@"name"];
-            [newManagedObject setValue:course[@"subject"] forKey:@"subject"];
+            [newManagedObject setValue:course[@"area"] forKey:@"area"];
             [newManagedObject setValue:course[@"credits"] forKey:@"credits"];
             [newManagedObject setValue:course[@"description"] forKey:@"desc"];
+            [newManagedObject setValue:course[@"name"] forKey:@"name"];
+            [newManagedObject setValue:course[@"number"] forKey:@"number"];
             [newManagedObject setValue:NO forKey:@"required"];
+            [newManagedObject setValue:course[@"subject"] forKey:@"subject"];
             [newManagedObject setValue:NO forKey:@"taken"];
         }
         
@@ -217,6 +260,39 @@
             abort();
         }
     }
+}
+
+#pragma mark Content Filtering
+
+-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
+    NSArray *allItems = [[NSArray alloc] init];
+    allItems = [self.fetchedResultsController fetchedObjects];
+    
+    // Update the filtered array based on the search text and scope.
+    // Remove all objects from the filtered search array
+    [self.filteredCourseArray removeAllObjects];
+    
+    // Filter the array using NSPredicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
+    self.filteredCourseArray = [NSMutableArray arrayWithArray:[allItems filteredArrayUsingPredicate:predicate]];
+}
+
+#pragma mark - UISearchDisplayController Delegate Methods
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    // Tells the table data source to reload when text changes
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    // Tells the table data source to reload when scope bar selection changes
+    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
 }
 
 @end
